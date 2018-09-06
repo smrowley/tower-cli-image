@@ -15,4 +15,4 @@ RUN yum repolist all
 RUN pip install --upgrade pip && \
     pip install ansible-tower-cli
 
-CMD ["python", "/job_launch.py"]
+CMD ["/entrypoint.sh"]
