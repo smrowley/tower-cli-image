@@ -13,6 +13,7 @@ RUN yum repolist all
 #    chmod u+x /install_dumb_init.sh && \
 #    /install_dumb_init.sh
 RUN pip install --upgrade pip && \
-    pip install ansible-tower-cli
+    pip install ansible-tower-cli && \
+    chmod +x /entrypoint.sh
 
-CMD ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
